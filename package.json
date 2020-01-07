@@ -1,0 +1,40 @@
+{
+  "name": "redux-solid",
+  "version": "1.0.0",
+  "description": "A simple JavaScript library for Persian language localization. && convert english to persian & convert persian to english",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean & webpack -p --env.prod",
+    "start": "webpack-dev-server -d --env.dev",
+    "postbuild": "tsc --emitDeclarationOnly --declaration",
+    "deploy": "npm run build & npm run build:dev & npm run postbuild & npm publish --access=public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohammadashrafian/react-persian.git"
+  },
+  "keywords": [
+    "convertEnglishToPersian",
+    "persian",
+    "English",
+    "convertPersianToEnglish",
+    "oop"
+  ],
+  "author": "Mohammad Ashrafian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohammadashrafian/react-persian/issues"
+  },
+  "homepage": "https://github.com/mohammadashrafian/react-persian#readme",
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "rimraf": "^2.7.1",
+    "typescript": "^3.6.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  }
+}
